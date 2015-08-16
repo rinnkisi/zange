@@ -10,7 +10,7 @@ import UIKit
 
 class ZangeController: UIViewController, UITextFieldDelegate {
     // 懺悔を入力するビュー
-    
+    let ud = NSUserDefaults.standardUserDefaults()
     // テキストフィールドの宣言
     private var myTextField: UITextField!
     // ボタンの宣言
@@ -20,6 +20,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        var sex:AnyObject! = ud.objectForKey("sex")
         // 「懺悔を入力」を表示するラベル
         let myNormalLabel: UILabel = UILabel()
         myNormalLabel.font = UIFont.systemFontOfSize(CGFloat(20))
@@ -32,6 +33,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         myTextField = UITextField(frame: CGRectMake(50, 100, 250, 100))
         myTextField.borderStyle = UITextBorderStyle.RoundedRect  // 枠線を表示
         myTextField.delegate = self                              // デリゲートを追加
+        myTextField.text = String(stringInterpolationSegment: sex)
         self.view.addSubview(myTextField)                        // ビュー画面
         
         // Buttonを生成する.
