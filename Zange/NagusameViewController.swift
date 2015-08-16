@@ -52,7 +52,7 @@ class NagusameViewController: UIViewController {
     self.view.addSubview(myImageView)
     
     //発話を設定
-    param.utt = "こんにちわ"
+    param.utt = ud.stringForKey("zangetext")
     //APIのキャラクタ設定(デフォルト:ゼロ,20:桜子,30:ハヤテ)
     param.character = 20
     
@@ -66,20 +66,23 @@ class NagusameViewController: UIViewController {
       self.param.context = "\(resultData.context)"
       let utterance = AVSpeechUtterance(string: "\(resultData.yomi)")
       utterance.voice = AVSpeechSynthesisVoice(language: "jp-JP")
-      utterance.rate = 0.2
-      utterance.pitchMultiplier = 0.2
+      utterance.rate = 0.1
+      utterance.pitchMultiplier = 5.0
       self.talker.speakUtterance(utterance)
+      
+      // 格言を表示
+      let myNormalLabel: UILabel = UILabel()
+      myNormalLabel.font = UIFont.systemFontOfSize(CGFloat(20))
+      myNormalLabel.text = resultData.yomi
+      myNormalLabel.frame = CGRect(x: self.view.bounds.width / 2 - 100, y: self.view.bounds.height - 250, width: 200, height: 150)
+      myNormalLabel.textColor = UIColor.redColor()
+      self.view.addSubview(myNormalLabel)
+      
       }) { (sdkError) -> Void in
         println("\(sdkError)")
     }
     
-    // 格言を表示
-    let myNormalLabel: UILabel = UILabel()
-    myNormalLabel.font = UIFont.systemFontOfSize(CGFloat(20))
-    myNormalLabel.text = data_sample.Get_RndKakugen()
-    myNormalLabel.frame = CGRect(x: self.view.bounds.width / 2 - 100, y: self.view.bounds.height - 250, width: 200, height: 150)
-    myNormalLabel.textColor = UIColor.redColor()
-    self.view.addSubview(myNormalLabel)
+    
     
     // 「もう一度懺悔する」ボタンを生成
     let backButton: UIButton = UIButton(frame: CGRectMake(0, 0, self.view.bounds.width, 50))
