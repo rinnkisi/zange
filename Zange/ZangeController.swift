@@ -18,6 +18,10 @@ class ZangeController: UIViewController, UITextFieldDelegate {
 
     // ボタンの宣言
     private var myButton: UIButton!
+
+    // ボタンの色
+    private let buttonOffColor = UIColor(red: 0.7, green: 0.7, blue: 1.0, alpha: 1.0)
+    private let buttonOnColor = UIColor(red: 0.1, green: 0.1, blue: 1.0, alpha: 1.0)
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,31 +59,31 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         
         // 「男」ボタンの生成
         ud.setBool(true, forKey: "sex")//初期値を男性に設定
-        menButton.backgroundColor = UIColor.blueColor();
+        menButton.backgroundColor = buttonOnColor
         menButton.layer.masksToBounds = true
         menButton.setTitle("男", forState: .Normal)
-        menButton.layer.cornerRadius = 20.0
-        menButton.layer.position = CGPoint(x: self.view.bounds.width/2-100 , y:self.view.bounds.height-150)
+        //menButton.layer.cornerRadius = 20.0
+        menButton.layer.position = CGPoint(x: self.view.bounds.width/2-60 , y:self.view.bounds.height-150)
         // 「男」ボタンを追加する.
         menButton.addTarget(self, action: "didmenTouch:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(menButton);
         
         // 「女」ボタンの生成
-        womenButton.backgroundColor = UIColor.redColor();
+        womenButton.backgroundColor = buttonOffColor
         womenButton.layer.masksToBounds = true
         womenButton.setTitle("女", forState: .Normal)
-        womenButton.layer.cornerRadius = 20.0
-        womenButton.layer.position = CGPoint(x: self.view.bounds.width/2+100 , y:self.view.bounds.height-150)
+        //womenButton.layer.cornerRadius = 20.0
+        womenButton.layer.position = CGPoint(x: self.view.bounds.width/2+60 , y:self.view.bounds.height-150)
         womenButton.addTarget(self, action: "didwomenTouch:", forControlEvents: UIControlEvents.TouchUpInside)
         // 「女」ボタンを追加する.
         self.view.addSubview(womenButton);
-        
+      
         // Buttonを生成する.
         myButton = UIButton()
-        myButton.frame = CGRectMake(0,0,200,40)
+        myButton.frame = CGRectMake(0,0,self.view.bounds.width,100)
         myButton.backgroundColor = UIColor.redColor()
         myButton.layer.masksToBounds = true
-        myButton.layer.cornerRadius = 20.0
+        //myButton.layer.cornerRadius = 20.0
         myButton.layer.position = CGPoint(x: self.view.frame.width/2, y:self.view.bounds.height-50)
         myButton.tag = 1         // タグを設定する.
         // タイトルを設定する(通常時).
@@ -103,19 +107,20 @@ class ZangeController: UIViewController, UITextFieldDelegate {
     func didmenTouch(button :UIButton){
         //男性ボタンが押された時の処理
         var flag = true
-        menButton.backgroundColor = UIColor.blueColor()
-        womenButton.backgroundColor = UIColor.redColor()
+        menButton.backgroundColor = buttonOnColor
+        womenButton.backgroundColor = buttonOffColor
         ud.setBool(true, forKey: "sex") //ユーザのデフォルトに入れる
         println("「男」ボタンがタッチされました")
     }
     func didwomenTouch(button :UIButton){
         //女性ボタンが押された時の処理
         var flag = false
-        menButton.backgroundColor = UIColor.redColor()
-        womenButton.backgroundColor = UIColor.blueColor()
+        menButton.backgroundColor = buttonOffColor
+        womenButton.backgroundColor = buttonOnColor
         ud.setBool(false, forKey: "sex") //ユーザのデフォルトに入れる
         println("「女」ボタンがタッチされました")
     }
+  
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
