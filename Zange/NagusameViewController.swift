@@ -86,8 +86,12 @@ class NagusameViewController: UIViewController {
       let myNormalLabel: UILabel = UILabel()
       myNormalLabel.font = UIFont.systemFontOfSize(CGFloat(20))
       myNormalLabel.text = resultData.yomi
-      myNormalLabel.frame = CGRect(x: self.view.bounds.width / 2 - 100, y: self.view.bounds.height - 250, width: 200, height: 150)
-      myNormalLabel.textColor = UIColor.redColor()
+      myNormalLabel.frame = CGRect(x: self.view.bounds.width / 2 - 150, y: self.view.bounds.height - 250, width: 300, height: 100)
+      myNormalLabel.numberOfLines = 0 // 自動改行
+      myNormalLabel.sizeToFit();  // 高さを自動で調整
+     
+      myNormalLabel.textColor = UIColor.blackColor()
+      myNormalLabel.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.7)
       self.view.addSubview(myNormalLabel)
       
       }) { (sdkError) -> Void in
