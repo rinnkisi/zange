@@ -9,8 +9,9 @@
 3. 美少女 / イケメンがランダムに格言を与えてくれる…！
 4. もう一度懺悔する？
 
+[NTT Docomo 雑談対話API](https://dev.smt.docomo.ne.jp/?p=docs.api.page&api_name=dialogue&p_name=api_reference)を使用
+
 ### Future Works
 * これまでの懺悔の内容を表示したい
 * 画像に稀少度をつけてコレクションしたい
-* 懺悔を音声入力にしたい
-* 懺悔に対応した格言を与えたい（雑談対話API？）
+* 懺悔を音声入力にしたい（音声認識API？）
