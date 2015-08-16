@@ -29,7 +29,6 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(myNormalLabel)
 
         // 懺悔を入力するテキストフィールドを宣言
-        println(self.view.bounds.width)
         myTextField = UITextField(frame: CGRectMake((self.view.bounds.width - 270) / 2, 100, 270, 100))
         myTextField.borderStyle = UITextBorderStyle.RoundedRect  // 枠線を表示
         myTextField.delegate = self                              // デリゲートを追加
