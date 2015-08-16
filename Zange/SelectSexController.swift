@@ -12,7 +12,9 @@ class SelectSexController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
+        let swiftdata = SwiftDataSample()
+      
         // 背景色は黒
         self.view.backgroundColor = UIColor.blackColor()
 

@@ -14,6 +14,9 @@
 		CE140A811B805B3C007F656E /* ZangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A801B805B3C007F656E /* ZangeTests.swift */; };
 		CE140A8D1B806A2F007F656E /* SelectSexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A8C1B806A2F007F656E /* SelectSexController.swift */; };
 		CE140A8F1B80730A007F656E /* NagusameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A8E1B80730A007F656E /* NagusameViewController.swift */; };
+		CE140A911B8093A2007F656E /* SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A901B8093A2007F656E /* SwiftData.swift */; };
+		CE140A931B8093D0007F656E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE140A921B8093D0007F656E /* libsqlite3.dylib */; };
+		CE140A971B809951007F656E /* SwiftDataSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A961B809951007F656E /* SwiftDataSample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,10 @@
 		CE140A801B805B3C007F656E /* ZangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZangeTests.swift; sourceTree = "<group>"; };
 		CE140A8C1B806A2F007F656E /* SelectSexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSexController.swift; sourceTree = "<group>"; };
 		CE140A8E1B80730A007F656E /* NagusameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NagusameViewController.swift; sourceTree = "<group>"; };
+		CE140A901B8093A2007F656E /* SwiftData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftData.swift; path = Zange/SwiftData.swift; sourceTree = "<group>"; };
+		CE140A921B8093D0007F656E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CE140A951B80952C007F656E /* Briding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Briding-Header.h"; sourceTree = "<group>"; };
+		CE140A961B809951007F656E /* SwiftDataSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataSample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE140A931B8093D0007F656E /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +69,9 @@
 		CE140A5C1B805B3C007F656E = {
 			isa = PBXGroup;
 			children = (
+				CE140A921B8093D0007F656E /* libsqlite3.dylib */,
+				CE140A901B8093A2007F656E /* SwiftData.swift */,
+				CE140A951B80952C007F656E /* Briding-Header.h */,
 				CE140A671B805B3C007F656E /* Zange */,
 				CE140A7D1B805B3C007F656E /* ZangeTests */,
 				CE140A661B805B3C007F656E /* Products */,
@@ -86,6 +97,7 @@
 				CE140A8C1B806A2F007F656E /* SelectSexController.swift */,
 				CE140A6C1B805B3C007F656E /* ZangeController.swift */,
 				CE140A8E1B80730A007F656E /* NagusameViewController.swift */,
+				CE140A961B809951007F656E /* SwiftDataSample.swift */,
 			);
 			path = Zange;
 			sourceTree = "<group>";
@@ -215,9 +227,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE140A6D1B805B3C007F656E /* ZangeController.swift in Sources */,
+				CE140A971B809951007F656E /* SwiftDataSample.swift in Sources */,
 				CE140A6B1B805B3C007F656E /* AppDelegate.swift in Sources */,
 				CE140A8D1B806A2F007F656E /* SelectSexController.swift in Sources */,
 				CE140A8F1B80730A007F656E /* NagusameViewController.swift in Sources */,
+				CE140A911B8093A2007F656E /* SwiftData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +353,8 @@
 				INFOPLIST_FILE = Zange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Briding-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Briding-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -350,6 +366,7 @@
 				INFOPLIST_FILE = Zange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Briding-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -407,6 +424,7 @@
 				CE140A861B805B3C007F656E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE140A871B805B3C007F656E /* Build configuration list for PBXNativeTarget "ZangeTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +433,7 @@
 				CE140A891B805B3C007F656E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
