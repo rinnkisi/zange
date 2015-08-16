@@ -59,6 +59,9 @@ class SwiftDataSample {
       }
     }
     println(SD.databasePath())
+    
+    println("実行")
+    println(Get_RndKakugen())
   }
   // 初期データ作成用
   func Add_Kakugen(kakugen_id : Int, kakugen :String) ->Bool{
@@ -152,7 +155,6 @@ class SwiftDataSample {
       Collected_Gazou(p_id)
       return result[p_id]
     }
-    return ""
   }
   
   func Collected_Gazou(gazou_id : Int) ->Bool{
@@ -168,6 +170,24 @@ class SwiftDataSample {
       return false;
     } else {
       return true;
+    }
+  }
+  
+  func Get_RndKakugen() -> String{
+    // ランダムに格言を一つ返す
+    let (resultSet, err) = SD.executeQuery("SELECT word FROM kakugen_mst")
+    if err != nil {
+      //there was an error during the query, handle it here
+      return ""
+    } else {
+      var result = [String]()
+      for row in resultSet {
+        if let name = row["word"]?.asString() {
+          result.append(name)
+        }
+      }
+      let p_id = Int(arc4random_uniform(UInt32(result.count)))
+      return result[p_id]
     }
   }
 }
