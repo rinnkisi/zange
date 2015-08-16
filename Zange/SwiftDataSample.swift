@@ -28,7 +28,7 @@ class SwiftDataSample {
         // データを追加
         let Men = 1
         let Women = 0
-        var gazou_id = 1;
+        var gazou_id = 0
         
         // 男性の画像追加
         let data_men = NSString(contentsOfFile: NSBundle.mainBundle().pathForResource("men", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil) as! String
@@ -59,9 +59,8 @@ class SwiftDataSample {
       }
     }
     println(SD.databasePath())
-
   }
-  
+  // 初期データ作成用
   func Add_Kakugen(kakugen_id : Int, kakugen :String) ->Bool{
     // 格言を格納する。
     // sqlを準備
@@ -94,6 +93,8 @@ class SwiftDataSample {
     }
   }
   
+  // データ取得・操作用↓
+  
   func Add_Zange(zange_id : Int, zange : String) ->Bool{
     // 入力された懺悔を記録するメソッド
     // sqlを準備
@@ -110,7 +111,7 @@ class SwiftDataSample {
     }
   }
   
-  func Get_PicPath(gazou_id : Int) -> String{
+  func Get_ID2PicPath(gazou_id : Int) -> String{
     // 画像IDに対して、ファイル名を返す
     let (resultSet, err) = SD.executeQuery("SELECT url FROM gazou_mst where gazou_id = ?", withArgs: [gazou_id])
     if err != nil {
@@ -122,6 +123,34 @@ class SwiftDataSample {
           return name
         }
       }
+    }
+    return ""
+  }
+  
+  func Get_Bool2PicPath(IsMen : Bool) -> String{
+    // Bool型の引数（男はTrue,女はFalse）に対して、ランダムにファイル名を返す
+    // Int(arc4random_uniform(5)  .description
+    var sex = 0
+    if IsMen {
+      sex = 1
+    } else {
+      sex = 0
+    }
+    let (resultSet, err) = SD.executeQuery("SELECT url FROM gazou_mst where sex = ?", withArgs: [sex])
+    if err != nil {
+      //there was an error during the query, handle it here
+      return ""
+    } else {
+      var result = [String]()
+      for row in resultSet {
+        if let name = row["url"]?.asString() {
+          result.append(name)
+        }
+      }
+      let p_id = Int(arc4random_uniform(UInt32(result.count)))
+      // 収集済みフラグを立てる
+      Collected_Gazou(p_id)
+      return result[p_id]
     }
     return ""
   }
