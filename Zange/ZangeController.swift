@@ -25,6 +25,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         let ud = NSUserDefaults.standardUserDefaults()
         var sex:AnyObject! = ud.objectForKey("sex")
         // 背景色は黒
+        // self.view.backgroundColor = UIColor.blackColor()
         self.view.backgroundColor = UIColor.blackColor()
         // 「懺悔を入力」を表示するラベル
         let ZangeLabel: UILabel = UILabel()
@@ -96,7 +97,10 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
     func didmenTouch(button :UIButton){
         //男性ボタンが押された時の処理
         var flag = true
@@ -129,6 +133,5 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         // ビューを遷移
         self.navigationController?.pushViewController(myThirdViewController, animated: true)
         myTextField.text = nil
-        
     }
 }
