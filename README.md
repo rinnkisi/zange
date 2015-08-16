@@ -2,9 +2,7 @@
 
 ## 美少女 / イケメンに懺悔しよう！
 
-<div style="margin: 0, auto;">
 ![](/Zange/contents/images/main.jpg)
-</div>
 
 ### Contents
 
