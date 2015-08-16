@@ -1,4 +1,3 @@
-//
 //  ViewController.swift
 //  Zange
 //
@@ -9,6 +8,7 @@
 import UIKit
 
 class ZangeController: UIViewController, UITextFieldDelegate {
+
     // 懺悔を入力するビュー
     let ud = NSUserDefaults.standardUserDefaults()
     // テキストフィールドの宣言
@@ -28,7 +28,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         myNormalLabel.frame = CGRect(x: 25, y: 10, width: 200, height: 150)
         myNormalLabel.textColor = UIColor.whiteColor()
         self.view.addSubview(myNormalLabel)
-        
+
         // 懺悔を入力するテキストフィールドを宣言
         myTextField = UITextField(frame: CGRectMake(50, 100, 250, 100))
         myTextField.borderStyle = UITextBorderStyle.RoundedRect  // 枠線を表示
@@ -84,6 +84,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func didmenTouch(button :UIButton){
         var flag = true
         ud.setObject("男", forKey: "sex")
@@ -111,4 +112,3 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         self.navigationController?.pushViewController(myThirdViewController, animated: true)
     }
 }
-
