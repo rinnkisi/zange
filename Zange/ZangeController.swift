@@ -8,6 +8,7 @@
 import UIKit
 
 class ZangeController: UIViewController, UITextFieldDelegate {
+  
     // 懺悔を入力するビュー
     let ud = NSUserDefaults.standardUserDefaults()
     // テキストフィールドの宣言
@@ -17,7 +18,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
 
     // ボタンの宣言
     private var myButton: UIButton!
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

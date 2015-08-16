@@ -20,6 +20,23 @@
 		2C258AD41B80975D000199F6 /* w04@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C258AC61B80975D000199F6 /* w04@2x.jpg */; };
 		2C258AD51B80975D000199F6 /* women.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C258AC71B80975D000199F6 /* women.txt */; };
 		2C258AD61B80975D000199F6 /* proverbs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C258AC91B80975D000199F6 /* proverbs.txt */; };
+		2C89DEB01B80FE70008418FC /* w05@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEA11B80FE70008418FC /* w05@2x.jpg */; };
+		2C89DEB11B80FE70008418FC /* w06@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEA21B80FE70008418FC /* w06@2x.jpg */; };
+		2C89DEB21B80FE70008418FC /* w07@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEA31B80FE70008418FC /* w07@2x.jpg */; };
+		2C89DEB31B80FE70008418FC /* w08@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEA41B80FE70008418FC /* w08@2x.jpg */; };
+		2C89DEB41B80FE70008418FC /* w09@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEA51B80FE70008418FC /* w09@2x.jpg */; };
+		2C89DEB51B80FE70008418FC /* w10@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEA61B80FE70008418FC /* w10@2x.jpg */; };
+		2C89DEB61B80FE70008418FC /* w11@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEA71B80FE70008418FC /* w11@2x.jpg */; };
+		2C89DEB71B80FE70008418FC /* w12@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEA81B80FE70008418FC /* w12@2x.jpg */; };
+		2C89DEB81B80FE70008418FC /* w13@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEA91B80FE70008418FC /* w13@2x.jpg */; };
+		2C89DEB91B80FE70008418FC /* w14@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEAA1B80FE70008418FC /* w14@2x.jpg */; };
+		2C89DEBA1B80FE70008418FC /* w15@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEAB1B80FE70008418FC /* w15@2x.jpg */; };
+		2C89DEBB1B80FE70008418FC /* w16@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEAC1B80FE70008418FC /* w16@2x.jpg */; };
+		2C89DEBC1B80FE70008418FC /* w17@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEAD1B80FE70008418FC /* w17@2x.jpg */; };
+		2C89DEBD1B80FE70008418FC /* w18@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEAE1B80FE70008418FC /* w18@2x.jpg */; };
+		2C89DEBE1B80FE70008418FC /* w19@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEAF1B80FE70008418FC /* w19@2x.jpg */; };
+		2CBCB7511B810C4600C81C50 /* libdocomo-common-ios-sdk-1.0.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBCB74E1B810C4600C81C50 /* libdocomo-common-ios-sdk-1.0.1.a */; };
+		2CBCB7521B810C4600C81C50 /* libdocomo-dialogue-ios-sdk-2.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBCB74F1B810C4600C81C50 /* libdocomo-dialogue-ios-sdk-2.0.0.a */; };
 		CE140A6B1B805B3C007F656E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A6A1B805B3C007F656E /* AppDelegate.swift */; };
 		CE140A6D1B805B3C007F656E /* ZangeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A6C1B805B3C007F656E /* ZangeController.swift */; };
 		CE140A721B805B3C007F656E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE140A711B805B3C007F656E /* Images.xcassets */; };
@@ -55,6 +72,31 @@
 		2C258AC61B80975D000199F6 /* w04@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w04@2x.jpg"; sourceTree = "<group>"; };
 		2C258AC71B80975D000199F6 /* women.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = women.txt; sourceTree = "<group>"; };
 		2C258AC91B80975D000199F6 /* proverbs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = proverbs.txt; sourceTree = "<group>"; };
+		2C89DEA11B80FE70008418FC /* w05@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w05@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEA21B80FE70008418FC /* w06@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w06@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEA31B80FE70008418FC /* w07@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w07@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEA41B80FE70008418FC /* w08@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w08@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEA51B80FE70008418FC /* w09@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w09@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEA61B80FE70008418FC /* w10@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w10@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEA71B80FE70008418FC /* w11@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w11@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEA81B80FE70008418FC /* w12@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w12@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEA91B80FE70008418FC /* w13@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w13@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEAA1B80FE70008418FC /* w14@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w14@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEAB1B80FE70008418FC /* w15@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w15@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEAC1B80FE70008418FC /* w16@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w16@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEAD1B80FE70008418FC /* w17@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w17@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEAE1B80FE70008418FC /* w18@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w18@2x.jpg"; sourceTree = "<group>"; };
+		2C89DEAF1B80FE70008418FC /* w19@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "w19@2x.jpg"; sourceTree = "<group>"; };
+		2CBCB7471B810C2F00C81C50 /* AuthApiKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthApiKey.h; sourceTree = "<group>"; };
+		2CBCB7481B810C2F00C81C50 /* Dialogue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dialogue.h; sourceTree = "<group>"; };
+		2CBCB7491B810C2F00C81C50 /* DialogueError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogueError.h; sourceTree = "<group>"; };
+		2CBCB74A1B810C2F00C81C50 /* DialogueRequestParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogueRequestParam.h; sourceTree = "<group>"; };
+		2CBCB74B1B810C2F00C81C50 /* DialogueResultData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogueResultData.h; sourceTree = "<group>"; };
+		2CBCB74C1B810C2F00C81C50 /* SdkError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SdkError.h; sourceTree = "<group>"; };
+		2CBCB74E1B810C4600C81C50 /* libdocomo-common-ios-sdk-1.0.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libdocomo-common-ios-sdk-1.0.1.a"; sourceTree = "<group>"; };
+		2CBCB74F1B810C4600C81C50 /* libdocomo-dialogue-ios-sdk-2.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libdocomo-dialogue-ios-sdk-2.0.0.a"; sourceTree = "<group>"; };
+		2CBCB7501B810C4600C81C50 /* test-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "test-Bridging-Header.h"; sourceTree = "<group>"; };
+		2CBCB7531B810D3600C81C50 /* Zange-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zange-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE140A651B805B3C007F656E /* Zange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE140A691B805B3C007F656E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE140A6A1B805B3C007F656E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CBCB7511B810C4600C81C50 /* libdocomo-common-ios-sdk-1.0.1.a in Frameworks */,
+				2CBCB7521B810C4600C81C50 /* libdocomo-dialogue-ios-sdk-2.0.0.a in Frameworks */,
 				CE140A931B8093D0007F656E /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +168,21 @@
 		2C258AC11B80975D000199F6 /* women */ = {
 			isa = PBXGroup;
 			children = (
+				2C89DEA11B80FE70008418FC /* w05@2x.jpg */,
+				2C89DEA21B80FE70008418FC /* w06@2x.jpg */,
+				2C89DEA31B80FE70008418FC /* w07@2x.jpg */,
+				2C89DEA41B80FE70008418FC /* w08@2x.jpg */,
+				2C89DEA51B80FE70008418FC /* w09@2x.jpg */,
+				2C89DEA61B80FE70008418FC /* w10@2x.jpg */,
+				2C89DEA71B80FE70008418FC /* w11@2x.jpg */,
+				2C89DEA81B80FE70008418FC /* w12@2x.jpg */,
+				2C89DEA91B80FE70008418FC /* w13@2x.jpg */,
+				2C89DEAA1B80FE70008418FC /* w14@2x.jpg */,
+				2C89DEAB1B80FE70008418FC /* w15@2x.jpg */,
+				2C89DEAC1B80FE70008418FC /* w16@2x.jpg */,
+				2C89DEAD1B80FE70008418FC /* w17@2x.jpg */,
+				2C89DEAE1B80FE70008418FC /* w18@2x.jpg */,
+				2C89DEAF1B80FE70008418FC /* w19@2x.jpg */,
 				2C258AC21B80975D000199F6 /* w00@2x.jpg */,
 				2C258AC31B80975D000199F6 /* w01@2x.jpg */,
 				2C258AC41B80975D000199F6 /* w02@2x.jpg */,
@@ -142,9 +201,34 @@
 			path = proverbs;
 			sourceTree = "<group>";
 		};
+		2CBCB7461B810C2F00C81C50 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				2CBCB7471B810C2F00C81C50 /* AuthApiKey.h */,
+				2CBCB7481B810C2F00C81C50 /* Dialogue.h */,
+				2CBCB7491B810C2F00C81C50 /* DialogueError.h */,
+				2CBCB74A1B810C2F00C81C50 /* DialogueRequestParam.h */,
+				2CBCB74B1B810C2F00C81C50 /* DialogueResultData.h */,
+				2CBCB74C1B810C2F00C81C50 /* SdkError.h */,
+			);
+			name = inc;
+			path = Zange/inc;
+			sourceTree = SOURCE_ROOT;
+		};
+		2CBCB74D1B810C4600C81C50 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				2CBCB74E1B810C4600C81C50 /* libdocomo-common-ios-sdk-1.0.1.a */,
+				2CBCB74F1B810C4600C81C50 /* libdocomo-dialogue-ios-sdk-2.0.0.a */,
+				2CBCB7501B810C4600C81C50 /* test-Bridging-Header.h */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
 		CE140A5C1B805B3C007F656E = {
 			isa = PBXGroup;
 			children = (
+				2CBCB7531B810D3600C81C50 /* Zange-Bridging-Header.h */,
 				CE140A921B8093D0007F656E /* libsqlite3.dylib */,
 				CE140A901B8093A2007F656E /* SwiftData.swift */,
 				CE140A951B80952C007F656E /* Briding-Header.h */,
@@ -166,6 +250,8 @@
 		CE140A671B805B3C007F656E /* Zange */ = {
 			isa = PBXGroup;
 			children = (
+				2CBCB74D1B810C4600C81C50 /* libs */,
+				2CBCB7461B810C2F00C81C50 /* inc */,
 				CE140A6A1B805B3C007F656E /* AppDelegate.swift */,
 				2C258AB81B80975D000199F6 /* contents */,
 				CE140A711B805B3C007F656E /* Images.xcassets */,
@@ -285,19 +371,34 @@
 			files = (
 				2C258ACA1B80975D000199F6 /* m00@2x.jpg in Resources */,
 				2C258AD31B80975D000199F6 /* w03@2x.jpg in Resources */,
+				2C89DEBE1B80FE70008418FC /* w19@2x.jpg in Resources */,
 				2C258AD01B80975D000199F6 /* w00@2x.jpg in Resources */,
+				2C89DEB51B80FE70008418FC /* w10@2x.jpg in Resources */,
+				2C89DEB41B80FE70008418FC /* w09@2x.jpg in Resources */,
+				2C89DEB21B80FE70008418FC /* w07@2x.jpg in Resources */,
 				2C258ACC1B80975D000199F6 /* m02@2x.jpg in Resources */,
 				2C258ACB1B80975D000199F6 /* m01@2x.jpg in Resources */,
+				2C89DEBB1B80FE70008418FC /* w16@2x.jpg in Resources */,
 				CE140A751B805B3C007F656E /* LaunchScreen.xib in Resources */,
 				CE140A721B805B3C007F656E /* Images.xcassets in Resources */,
+				2C89DEB61B80FE70008418FC /* w11@2x.jpg in Resources */,
 				2C258AD21B80975D000199F6 /* w02@2x.jpg in Resources */,
 				2C258ACF1B80975D000199F6 /* men.txt in Resources */,
+				2C89DEBD1B80FE70008418FC /* w18@2x.jpg in Resources */,
 				2C258ACE1B80975D000199F6 /* m04@2x.jpg in Resources */,
+				2C89DEB81B80FE70008418FC /* w13@2x.jpg in Resources */,
 				2C258AD41B80975D000199F6 /* w04@2x.jpg in Resources */,
+				2C89DEB11B80FE70008418FC /* w06@2x.jpg in Resources */,
+				2C89DEB91B80FE70008418FC /* w14@2x.jpg in Resources */,
 				2C258AD61B80975D000199F6 /* proverbs.txt in Resources */,
+				2C89DEB31B80FE70008418FC /* w08@2x.jpg in Resources */,
 				2C258ACD1B80975D000199F6 /* m03@2x.jpg in Resources */,
+				2C89DEBC1B80FE70008418FC /* w17@2x.jpg in Resources */,
 				2C258AD11B80975D000199F6 /* w01@2x.jpg in Resources */,
+				2C89DEBA1B80FE70008418FC /* w15@2x.jpg in Resources */,
 				2C258AD51B80975D000199F6 /* women.txt in Resources */,
+				2C89DEB01B80FE70008418FC /* w05@2x.jpg in Resources */,
+				2C89DEB71B80FE70008418FC /* w12@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,9 +541,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Zange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Zange/libs",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Briding-Header.h";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Briding-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Y_oHr_N/Desktop/basic_internship/Zange-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/Y_oHr_N/Desktop/basic_internship/Zange-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -453,8 +558,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Zange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Zange/libs",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Briding-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Y_oHr_N/Desktop/basic_internship/Zange-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
