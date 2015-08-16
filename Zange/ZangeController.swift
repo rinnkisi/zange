@@ -63,7 +63,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         menButton.layer.masksToBounds = true
         menButton.setTitle("男", forState: .Normal)
         //menButton.layer.cornerRadius = 20.0
-        menButton.layer.position = CGPoint(x: self.view.bounds.width/2-60 , y:self.view.bounds.height-150)
+        menButton.layer.position = CGPoint(x: self.view.bounds.width/2-60 , y:self.view.bounds.height-200)
         // 「男」ボタンを追加する.
         menButton.addTarget(self, action: "didmenTouch:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(menButton);
@@ -73,24 +73,24 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         womenButton.layer.masksToBounds = true
         womenButton.setTitle("女", forState: .Normal)
         //womenButton.layer.cornerRadius = 20.0
-        womenButton.layer.position = CGPoint(x: self.view.bounds.width/2+60 , y:self.view.bounds.height-150)
+        womenButton.layer.position = CGPoint(x: self.view.bounds.width/2+60 , y:self.view.bounds.height-200)
         womenButton.addTarget(self, action: "didwomenTouch:", forControlEvents: UIControlEvents.TouchUpInside)
         // 「女」ボタンを追加する.
         self.view.addSubview(womenButton);
       
         // Buttonを生成する.
         myButton = UIButton()
-        myButton.frame = CGRectMake(0,0,self.view.bounds.width,100)
+        myButton.frame = CGRectMake(0,0,self.view.bounds.width,150)
         myButton.backgroundColor = UIColor.redColor()
         myButton.layer.masksToBounds = true
         //myButton.layer.cornerRadius = 20.0
-        myButton.layer.position = CGPoint(x: self.view.frame.width/2, y:self.view.bounds.height-50)
+        myButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height - 75)
         myButton.tag = 1         // タグを設定する.
         // タイトルを設定する(通常時).
-        myButton.setTitle("懺悔ボタン", forState: UIControlState.Normal)
+        myButton.setTitle("懺悔する", forState: UIControlState.Normal)
         myButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         // タイトルを設定する(ボタンがハイライトされた時).
-        myButton.setTitle("懺悔中", forState: UIControlState.Highlighted)
+        myButton.setTitle("懺悔中…", forState: UIControlState.Highlighted)
         myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
         // イベントを追加する.
         myButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
