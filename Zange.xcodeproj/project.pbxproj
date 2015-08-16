@@ -539,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Zange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -546,8 +547,8 @@
 					"$(PROJECT_DIR)/Zange/libs",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Y_oHr_N/Desktop/basic_internship/Zange-Bridging-Header.h";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/Y_oHr_N/Desktop/basic_internship/Zange-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hayashitakashi/Documents/開発フォルダ/basic/hackathon2015_div2_a/Zange-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/hayashitakashi/Documents/開発フォルダ/basic/hackathon2015_div2_a/Zange-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -556,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Zange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -563,7 +565,7 @@
 					"$(PROJECT_DIR)/Zange/libs",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Y_oHr_N/Desktop/basic_internship/Zange-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hayashitakashi/Documents/開発フォルダ/basic/hackathon2015_div2_a/Zange-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
