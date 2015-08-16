@@ -4,11 +4,10 @@
 
 ![](/Zange/contents/images/main.jpg)
 
-求めよ，さらば与えられん
+> 求めよ，さらば与えられん．
 
 ### Themes
 「立ち上げるだけで完結する」アプリケーション
-
 
 ### Contents
 
