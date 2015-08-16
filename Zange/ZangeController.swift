@@ -86,13 +86,13 @@ class ZangeController: UIViewController, UITextFieldDelegate {
     
     func didmenTouch(button :UIButton){
         var flag = true
-        ud.setObject("true", forKey: "sex")
+        ud.setBool(true, forKey: "sex")
         println(flag)
         println("「男」ボタンがタッチされました")
     }
     func didwomenTouch(button :UIButton){
         var flag = false
-        ud.setObject("false", forKey: "sex")
+        ud.setBool(false, forKey: "sex")
         println(flag)
         println("「女」ボタンがタッチされました")
     }
