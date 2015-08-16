@@ -29,10 +29,11 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(myNormalLabel)
 
         // 懺悔を入力するテキストフィールドを宣言
-        myTextField = UITextField(frame: CGRectMake(50, 100, 250, 100))
+        myTextField = UITextField(frame: CGRectMake((self.view.bounds.width - 270) / 2, 100, 270, 100))
         myTextField.borderStyle = UITextBorderStyle.RoundedRect  // 枠線を表示
         myTextField.delegate = self                              // デリゲートを追加
-        myTextField.text = String(stringInterpolationSegment: sex)
+        // myTextField.text = String(stringInterpolationSegment: sex)
+        myTextField.textAlignment = NSTextAlignment.Center // 中央寄せする
         self.view.addSubview(myTextField)                        // ビュー画面
         
         // Buttonを生成する.
@@ -109,6 +110,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         println(ud.objectForKey("sex"))
         // ビューを遷移
         self.navigationController?.pushViewController(myThirdViewController, animated: true)
+        myTextField.text = nil
         
     }
 }
