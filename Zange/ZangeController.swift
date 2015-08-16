@@ -8,7 +8,6 @@
 import UIKit
 
 class ZangeController: UIViewController, UITextFieldDelegate {
-
     // 懺悔を入力するビュー
     let ud = NSUserDefaults.standardUserDefaults()
     // テキストフィールドの宣言
@@ -87,19 +86,18 @@ class ZangeController: UIViewController, UITextFieldDelegate {
     
     func didmenTouch(button :UIButton){
         var flag = true
-        ud.setObject("男", forKey: "sex")
+        ud.setObject("true", forKey: "sex")
         println(flag)
         println("「男」ボタンがタッチされました")
     }
     func didwomenTouch(button :UIButton){
         var flag = false
-        ud.setObject("女", forKey: "sex")
+        ud.setObject("false", forKey: "sex")
         println(flag)
         println("「女」ボタンがタッチされました")
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
         return true
     }
     internal func onClickMyButton(sender: UIButton){
@@ -108,7 +106,9 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         let myThirdViewController: UIViewController = NagusameViewController()
         // コンソールにテキストフィールドの入力値を表示
         println(myTextField.text)
+        println(ud.objectForKey("sex"))
         // ビューを遷移
         self.navigationController?.pushViewController(myThirdViewController, animated: true)
+        
     }
 }
