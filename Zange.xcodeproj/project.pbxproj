@@ -35,10 +35,6 @@
 		2C89DEBC1B80FE70008418FC /* w17@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEAD1B80FE70008418FC /* w17@2x.jpg */; };
 		2C89DEBD1B80FE70008418FC /* w18@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEAE1B80FE70008418FC /* w18@2x.jpg */; };
 		2C89DEBE1B80FE70008418FC /* w19@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C89DEAF1B80FE70008418FC /* w19@2x.jpg */; };
-		2CBCB7511B810C4600C81C50 /* libdocomo-common-ios-sdk-1.0.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBCB74E1B810C4600C81C50 /* libdocomo-common-ios-sdk-1.0.1.a */; };
-		2CBCB7521B810C4600C81C50 /* libdocomo-dialogue-ios-sdk-2.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBCB74F1B810C4600C81C50 /* libdocomo-dialogue-ios-sdk-2.0.0.a */; };
-		2CBCB7591B8136DD00C81C50 /* model_140319.dat in Resources */ = {isa = PBXBuildFile; fileRef = 2CBCB7581B8136DD00C81C50 /* model_140319.dat */; };
-		2CBCB75B1B8136FD00C81C50 /* libSRClientHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBCB75A1B8136FD00C81C50 /* libSRClientHelper.a */; };
 		CE140A6B1B805B3C007F656E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A6A1B805B3C007F656E /* AppDelegate.swift */; };
 		CE140A6D1B805B3C007F656E /* ZangeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A6C1B805B3C007F656E /* ZangeController.swift */; };
 		CE140A721B805B3C007F656E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE140A711B805B3C007F656E /* Images.xcassets */; };
@@ -48,6 +44,9 @@
 		CE140A911B8093A2007F656E /* SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A901B8093A2007F656E /* SwiftData.swift */; };
 		CE140A931B8093D0007F656E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE140A921B8093D0007F656E /* libsqlite3.dylib */; };
 		CE140A971B809951007F656E /* SwiftDataSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A961B809951007F656E /* SwiftDataSample.swift */; };
+		CE140ABC1B81470B007F656E /* libdocomo-common-ios-sdk-1.0.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE140AB81B81470B007F656E /* libdocomo-common-ios-sdk-1.0.1.a */; };
+		CE140ABD1B81470B007F656E /* libdocomo-dialogue-ios-sdk-2.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE140AB91B81470B007F656E /* libdocomo-dialogue-ios-sdk-2.0.0.a */; };
+		CE140ABE1B81470B007F656E /* libSRClientHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE140ABA1B81470B007F656E /* libSRClientHelper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,13 +94,9 @@
 		2CBCB74A1B810C2F00C81C50 /* DialogueRequestParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogueRequestParam.h; sourceTree = "<group>"; };
 		2CBCB74B1B810C2F00C81C50 /* DialogueResultData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogueResultData.h; sourceTree = "<group>"; };
 		2CBCB74C1B810C2F00C81C50 /* SdkError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SdkError.h; sourceTree = "<group>"; };
-		2CBCB74E1B810C4600C81C50 /* libdocomo-common-ios-sdk-1.0.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libdocomo-common-ios-sdk-1.0.1.a"; sourceTree = "<group>"; };
-		2CBCB74F1B810C4600C81C50 /* libdocomo-dialogue-ios-sdk-2.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libdocomo-dialogue-ios-sdk-2.0.0.a"; sourceTree = "<group>"; };
 		2CBCB7531B810D3600C81C50 /* Zange-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zange-Bridging-Header.h"; sourceTree = "<group>"; };
 		2CBCB7551B8136C800C81C50 /* SRClientDataClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRClientDataClasses.h; sourceTree = "<group>"; };
 		2CBCB7561B8136C800C81C50 /* SRClientHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRClientHelper.h; sourceTree = "<group>"; };
-		2CBCB7581B8136DD00C81C50 /* model_140319.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_140319.dat; sourceTree = "<group>"; };
-		2CBCB75A1B8136FD00C81C50 /* libSRClientHelper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSRClientHelper.a; path = ../../../../Downloads/SpeechRecSDK_iOS_v1.0.2/Libs/libSRClientHelper.a; sourceTree = "<group>"; };
 		CE140A651B805B3C007F656E /* Zange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE140A691B805B3C007F656E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE140A6A1B805B3C007F656E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,8 +109,11 @@
 		CE140A8E1B80730A007F656E /* NagusameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NagusameViewController.swift; sourceTree = "<group>"; };
 		CE140A901B8093A2007F656E /* SwiftData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftData.swift; path = Zange/SwiftData.swift; sourceTree = "<group>"; };
 		CE140A921B8093D0007F656E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		CE140A951B80952C007F656E /* Briding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Briding-Header.h"; sourceTree = "<group>"; };
 		CE140A961B809951007F656E /* SwiftDataSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataSample.swift; sourceTree = "<group>"; };
+		CE140AB81B81470B007F656E /* libdocomo-common-ios-sdk-1.0.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libdocomo-common-ios-sdk-1.0.1.a"; sourceTree = "<group>"; };
+		CE140AB91B81470B007F656E /* libdocomo-dialogue-ios-sdk-2.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libdocomo-dialogue-ios-sdk-2.0.0.a"; sourceTree = "<group>"; };
+		CE140ABA1B81470B007F656E /* libSRClientHelper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSRClientHelper.a; sourceTree = "<group>"; };
+		CE140AC01B814739007F656E /* model_140319.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = model_140319.dat; path = Zange/libs/model_140319.dat; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +121,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CBCB7511B810C4600C81C50 /* libdocomo-common-ios-sdk-1.0.1.a in Frameworks */,
-				2CBCB75B1B8136FD00C81C50 /* libSRClientHelper.a in Frameworks */,
-				2CBCB7521B810C4600C81C50 /* libdocomo-dialogue-ios-sdk-2.0.0.a in Frameworks */,
+				CE140ABC1B81470B007F656E /* libdocomo-common-ios-sdk-1.0.1.a in Frameworks */,
+				CE140ABE1B81470B007F656E /* libSRClientHelper.a in Frameworks */,
+				CE140ABD1B81470B007F656E /* libdocomo-dialogue-ios-sdk-2.0.0.a in Frameworks */,
 				CE140A931B8093D0007F656E /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,9 +222,9 @@
 		2CBCB74D1B810C4600C81C50 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				2CBCB75A1B8136FD00C81C50 /* libSRClientHelper.a */,
-				2CBCB74E1B810C4600C81C50 /* libdocomo-common-ios-sdk-1.0.1.a */,
-				2CBCB74F1B810C4600C81C50 /* libdocomo-dialogue-ios-sdk-2.0.0.a */,
+				CE140AB81B81470B007F656E /* libdocomo-common-ios-sdk-1.0.1.a */,
+				CE140AB91B81470B007F656E /* libdocomo-dialogue-ios-sdk-2.0.0.a */,
+				CE140ABA1B81470B007F656E /* libSRClientHelper.a */,
 			);
 			path = libs;
 			sourceTree = "<group>";
@@ -244,7 +242,7 @@
 		2CBCB7571B8136DD00C81C50 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2CBCB7581B8136DD00C81C50 /* model_140319.dat */,
+				CE140AC01B814739007F656E /* model_140319.dat */,
 			);
 			name = Resources;
 			path = ../../../Downloads/SpeechRecSDK_iOS_v1.0.2/Resources;
@@ -256,7 +254,6 @@
 				2CBCB7531B810D3600C81C50 /* Zange-Bridging-Header.h */,
 				CE140A921B8093D0007F656E /* libsqlite3.dylib */,
 				CE140A901B8093A2007F656E /* SwiftData.swift */,
-				CE140A951B80952C007F656E /* Briding-Header.h */,
 				CE140A671B805B3C007F656E /* Zange */,
 				CE140A7D1B805B3C007F656E /* ZangeTests */,
 				CE140A661B805B3C007F656E /* Products */,
@@ -408,7 +405,6 @@
 				2C89DEBB1B80FE70008418FC /* w16@2x.jpg in Resources */,
 				CE140A751B805B3C007F656E /* LaunchScreen.xib in Resources */,
 				CE140A721B805B3C007F656E /* Images.xcassets in Resources */,
-				2CBCB7591B8136DD00C81C50 /* model_140319.dat in Resources */,
 				2C89DEB61B80FE70008418FC /* w11@2x.jpg in Resources */,
 				2C258AD21B80975D000199F6 /* w02@2x.jpg in Resources */,
 				2C258ACF1B80975D000199F6 /* men.txt in Resources */,
