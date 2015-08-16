@@ -25,7 +25,6 @@
 		CE140A721B805B3C007F656E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE140A711B805B3C007F656E /* Images.xcassets */; };
 		CE140A751B805B3C007F656E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE140A731B805B3C007F656E /* LaunchScreen.xib */; };
 		CE140A811B805B3C007F656E /* ZangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A801B805B3C007F656E /* ZangeTests.swift */; };
-		CE140A8D1B806A2F007F656E /* SelectSexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A8C1B806A2F007F656E /* SelectSexController.swift */; };
 		CE140A8F1B80730A007F656E /* NagusameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A8E1B80730A007F656E /* NagusameViewController.swift */; };
 		CE140A911B8093A2007F656E /* SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE140A901B8093A2007F656E /* SwiftData.swift */; };
 		CE140A931B8093D0007F656E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE140A921B8093D0007F656E /* libsqlite3.dylib */; };
@@ -65,7 +64,6 @@
 		CE140A7A1B805B3C007F656E /* ZangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE140A7F1B805B3C007F656E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE140A801B805B3C007F656E /* ZangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZangeTests.swift; sourceTree = "<group>"; };
-		CE140A8C1B806A2F007F656E /* SelectSexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSexController.swift; sourceTree = "<group>"; };
 		CE140A8E1B80730A007F656E /* NagusameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NagusameViewController.swift; sourceTree = "<group>"; };
 		CE140A901B8093A2007F656E /* SwiftData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftData.swift; path = Zange/SwiftData.swift; sourceTree = "<group>"; };
 		CE140A921B8093D0007F656E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -173,7 +171,6 @@
 				CE140A711B805B3C007F656E /* Images.xcassets */,
 				CE140A731B805B3C007F656E /* LaunchScreen.xib */,
 				CE140A681B805B3C007F656E /* Supporting Files */,
-				CE140A8C1B806A2F007F656E /* SelectSexController.swift */,
 				CE140A6C1B805B3C007F656E /* ZangeController.swift */,
 				CE140A8E1B80730A007F656E /* NagusameViewController.swift */,
 				CE140A961B809951007F656E /* SwiftDataSample.swift */,
@@ -321,7 +318,6 @@
 				CE140A6D1B805B3C007F656E /* ZangeController.swift in Sources */,
 				CE140A971B809951007F656E /* SwiftDataSample.swift in Sources */,
 				CE140A6B1B805B3C007F656E /* AppDelegate.swift in Sources */,
-				CE140A8D1B806A2F007F656E /* SelectSexController.swift in Sources */,
 				CE140A8F1B80730A007F656E /* NagusameViewController.swift in Sources */,
 				CE140A911B8093A2007F656E /* SwiftData.swift in Sources */,
 			);
