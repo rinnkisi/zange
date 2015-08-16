@@ -9,6 +9,7 @@
 import UIKit
 
 class ZangeController: UIViewController, UITextFieldDelegate {
+
     // 懺悔を入力するビュー
     let ud = NSUserDefaults.standardUserDefaults()
     // テキストフィールドの宣言
@@ -61,20 +62,17 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    internal func onClickMyButton(sender: UIButton){
-        /* ボタン押下時の処理 */
-        // 遷移するViewを定義する.
-        let myThirdViewController: UIViewController = NagusameViewController()
-        
-        // コンソールにテキストフィールドの入力値を表示
-        println("\(myTextField.text)")
-        
-        // ビューを遷移
-        self.navigationController?.pushViewController(myThirdViewController, animated: true)
-        
-    }
 
+  
+  internal func onClickMyButton(sender: UIButton){
+    /* ボタン押下時の処理 */
+    // 遷移するViewを定義する.
+    let myThirdViewController: UIViewController = NagusameViewController()
     
+    // コンソールにテキストフィールドの入力値を表示
+    println("\(myTextField.text)")
+    
+    // ビューを遷移
+    self.navigationController?.pushViewController(myThirdViewController, animated: true)
+  }
 }
-
