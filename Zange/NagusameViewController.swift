@@ -8,11 +8,11 @@
 
 import UIKit
 
+// 美少女またはイケメンが格言を与えるクラス
 class NagusameViewController: UIViewController {
-  // 美少女またはイケメンが格言を与えるクラス
   
+  // 懺悔を入力するビュー
   let ud = NSUserDefaults.standardUserDefaults()
-
   
   private var myImageView: UIImageView!
   
@@ -20,7 +20,7 @@ class NagusameViewController: UIViewController {
     super.viewDidLoad()
     
     // 背景色
-    self.view.backgroundColor = UIColor.clearColor()
+    self.view.backgroundColor = UIColor.whiteColor()
     
     // 美少女またはイケメンの画像を表示
     myImageView = UIImageView(frame: CGRectMake(0, 0, self.view.bounds.width, 0))
@@ -37,13 +37,13 @@ class NagusameViewController: UIViewController {
     // 格言を表示
     let myNormalLabel: UILabel = UILabel()
     myNormalLabel.font = UIFont.systemFontOfSize(CGFloat(20))
-    myNormalLabel.text = "いいことあるよ！"
-    myNormalLabel.frame = CGRect(x: self.view.bounds.width / 2 - 100, y: self.view.bounds.height - 200, width: 200, height: 150)
-    myNormalLabel.textColor = UIColor.whiteColor()
+    myNormalLabel.text = data_sample.Get_RndKakugen()
+    myNormalLabel.frame = CGRect(x: self.view.bounds.width / 2 - 100, y: self.view.bounds.height - 250, width: 200, height: 150)
+    myNormalLabel.textColor = UIColor.redColor()
     self.view.addSubview(myNormalLabel)
     
     // 「もう一度懺悔する」ボタンを生成
-    let backButton: UIButton = UIButton(frame: CGRectMake(0, 0, self.view.bounds.width, 150))
+    let backButton: UIButton = UIButton(frame: CGRectMake(0, 0, self.view.bounds.width, 50))
     backButton.backgroundColor = UIColor.blueColor();
     backButton.layer.masksToBounds = true
     backButton.setTitle("もう一度懺悔する", forState: .Normal)

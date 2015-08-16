@@ -8,12 +8,13 @@
 import UIKit
 
 class ZangeController: UIViewController, UITextFieldDelegate {
-    // 懺悔を入力するビュー
-    let ud = NSUserDefaults.standardUserDefaults()
-    // テキストフィールドの宣言
-    private var myTextField: UITextField!
-    // ボタンの宣言
-    private var myButton: UIButton!
+  
+  // 懺悔を入力するビュー
+  let ud = NSUserDefaults.standardUserDefaults()
+  // テキストフィールドの宣言
+  private var myTextField: UITextField!
+  // ボタンの宣言
+  private var myButton: UIButton!
   
     override func viewDidLoad() {
         super.viewDidLoad()
