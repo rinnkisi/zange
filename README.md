@@ -4,6 +4,8 @@
 
 ![](/Zange/contents/images/main.jpg)
 
+求めよ，さらば与えられん
+
 ### Contents
 
 1. 性別を選択
