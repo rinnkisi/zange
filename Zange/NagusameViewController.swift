@@ -7,17 +7,36 @@
 //
 
 import UIKit
+import AVFoundation
 
 // 美少女またはイケメンが格言を与えるクラス
 class NagusameViewController: UIViewController {
   
-  // 懺悔を入力するビュー
+  //質問文問い合わせリクエスト
+  var param: DialogueRequestParam!
+  //雑談対話問い合わせ処理
+  var dialogue: Dialogue!
+  //回答データ
+  var resultData: DialogueResultData!
+  //エラー情報
+  var sdkError: SdkError!
+  var talker: AVSpeechSynthesizer!
+  
   let ud = NSUserDefaults.standardUserDefaults()
   
   private var myImageView: UIImageView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    //認証情報初期化
+    //docomo Developer supportから取得したAPIキーを設定
+    AuthApiKey.initializeAuth("69725746705451496f6d6d374e356f5a2f7a4d68532f6c6c545065374574316d6c5169477371486c487534")
+    
+    param = DialogueRequestParam()
+    dialogue = Dialogue()
+    sdkError = SdkError()
+    talker = AVSpeechSynthesizer()
     
     // 背景色
     self.view.backgroundColor = UIColor.whiteColor()
@@ -30,9 +49,29 @@ class NagusameViewController: UIViewController {
     let myImage = UIImage(named: data_sample.Get_Bool2PicPath(!ud.objectForKey("sex")!.boolValue!))
     myImageView.image = myImage
     myImageView.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 270.0)
-    
     self.view.addSubview(myImageView)
-  
+    
+    //発話を設定
+    param.utt = "こんにちわ"
+    //APIのキャラクタ設定(デフォルト:ゼロ,20:桜子,30:ハヤテ)
+    param.character = 20
+    
+    /*
+    雑談対話問い合わせ処理にデータを渡す.
+    APIからは音声合成用情報が「resultData.yomi」に返ってくるので
+    AVSpeechSynthesizerで読み上げる.
+    コンテキストID(resultData.context)を使うことで継続した会話ができる.
+    */
+    dialogue.request(param, onComplete: { (resultData) -> Void in
+      self.param.context = "\(resultData.context)"
+      let utterance = AVSpeechUtterance(string: "\(resultData.yomi)")
+      utterance.voice = AVSpeechSynthesisVoice(language: "jp-JP")
+      utterance.rate = 0.2
+      utterance.pitchMultiplier = 0.2
+      self.talker.speakUtterance(utterance)
+      }) { (sdkError) -> Void in
+        println("\(sdkError)")
+    }
     
     // 格言を表示
     let myNormalLabel: UILabel = UILabel()
