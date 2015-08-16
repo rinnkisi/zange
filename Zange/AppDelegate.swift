@@ -10,15 +10,20 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let ud = NSUserDefaults.standardUserDefaults()
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         // ViewControllerを生成する.
+        let mySecondViewController: ZangeController = ZangeController()
         let myFirstViewController: SelectSexController = SelectSexController()
-        let navigationCtr = UINavigationController(rootViewController: myFirstViewController)
+        println(ud.objectForKey("sex"))
+        var navigationCtr = UINavigationController(rootViewController: myFirstViewController)
+        if((ud.objectForKey("sex")) != nil){
+            var navigationCtr = UINavigationController(rootViewController: mySecondViewController)
+        }
         navigationCtr.setNavigationBarHidden(true, animated: false)
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = navigationCtr
