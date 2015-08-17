@@ -47,12 +47,11 @@ extension UIColor {
     }
 }
 
-class ZangeController: UIViewController, UITextFieldDelegate {
-  
+class ZangeController: UIViewController, UITextViewDelegate {
+    private var myTextView: UITextView!
     // 懺悔を入力するビュー
     let ud = NSUserDefaults.standardUserDefaults()
     // テキストフィールドの宣言
-    private var myTextField: UITextField!
     private let menButton: UIButton = UIButton(frame: CGRectMake(0,0,120,50))
     private let womenButton: UIButton = UIButton(frame: CGRectMake(0,0,120,50))
 
@@ -90,19 +89,23 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(ZangeLabel)
 
         // 懺悔を入力するテキストフィールドを宣言
-        myTextField = UITextField(frame: CGRectMake((self.view.bounds.width - 270) / 2, 100, 270, 100))
-        myTextField.borderStyle = UITextBorderStyle.RoundedRect  // 枠線を表示
-        myTextField.returnKeyType = UIReturnKeyType.Done //改行を完了ボタンにする
+        myTextView = UITextView(frame: CGRectMake((self.view.bounds.width - 270) / 2, 100, 270, 100))
+        myTextView.layer.borderWidth = 1
+        // 枠線の色を黒に設定する.
+        myTextView.layer.borderColor = UIColor.blackColor().CGColor
+        myTextView.returnKeyType = UIReturnKeyType.Done //改行を完了ボタンにする
+        myTextView.font = UIFont(name: "AmericanTypewriter",size: 20)
         // myTextField.text = String(stringInterpolationSegment: sex)
-        myTextField.textAlignment = NSTextAlignment.Justified // 中央寄せする
-        myTextField.delegate = self //デリゲートを追加
+        myTextView.textAlignment = NSTextAlignment.Justified // 中央寄せする
+        myTextView.delegate = self //デリゲートを追加
         // 左詰めの設定をする.
-        myTextField.textAlignment = NSTextAlignment.Left
-        myTextField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.6)
+        myTextView.textAlignment = NSTextAlignment.Left
+        myTextView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.6)
+        
+        self.view.addSubview(myTextView)
         // テキストフィールドを強制フォーカス
-        NSOperationQueue.mainQueue().addOperationWithBlock({myTextField.becomeFirstResponder()});
+        NSOperationQueue.mainQueue().addOperationWithBlock({myTextView.becomeFirstResponder()});
   
-        self.view.addSubview(myTextField) // ビュー画面
         // 性別を選択するビュー。
         let SexLabel: UILabel = UILabel()
         SexLabel.textColor = UIColor.whiteColor()
@@ -179,19 +182,36 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         println("「女」ボタンがタッチされました")
     }
   
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+    func textViewShouldReturn(textView: UITextView) -> Bool {
+        textView.resignFirstResponder()
         // 遷移するViewを定義する.
         let myThirdViewController: UIViewController = NagusameViewController()
         // コンソールにテキストフィールドの入力値を表示
         // println(myTextField.text)
-        ud.setObject(myTextField.text, forKey: "zangetext")
+        ud.setObject(myTextView.text, forKey: "zangetext")
         println(ud.objectForKey("zangetext"))
         println(ud.objectForKey("sex"))
         // ビューを遷移
         self.navigationController?.pushViewController(myThirdViewController, animated: true)
-        myTextField.text = nil
+        myTextView.text = nil
         return true
+    }
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange,
+        replacementText text: String) -> Bool {
+            if text == "\n" {
+                textView.resignFirstResponder() //キーボードを閉じる
+                let myThirdViewController: UIViewController = NagusameViewController()
+                // コンソールにテキストフィールドの入力値を表示
+                // println(myTextField.text)
+                ud.setObject(myTextView.text, forKey: "zangetext")
+                println(ud.objectForKey("zangetext"))
+                println(ud.objectForKey("sex"))
+                // ビューを遷移
+                self.navigationController?.pushViewController(myThirdViewController, animated: true)
+                myTextView.text = nil
+                return false
+            }
+            return true
     }
   
     // ボタン押下時の処理
@@ -200,12 +220,12 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         // 遷移するViewを定義する.
         let myThirdViewController: UIViewController = NagusameViewController()
         // コンソールにテキストフィールドの入力値を表示
-        // println(myTextField.text)
-        ud.setObject(myTextField.text, forKey: "zangetext")
+        println(myTextView.text)
+        ud.setObject(myTextView.text, forKey: "zangetext")
         println(ud.objectForKey("zangetext"))
         println(ud.objectForKey("sex"))
         // ビューを遷移
         self.navigationController?.pushViewController(myThirdViewController, animated: true)
-        myTextField.text = nil
+        myTextView.text = nil
     }
 }
