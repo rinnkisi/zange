@@ -96,7 +96,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         myTextField.borderStyle = UITextBorderStyle.RoundedRect  // 枠線を表示
         myTextField.returnKeyType = UIReturnKeyType.Done //改行を完了ボタンにする
         // myTextField.text = String(stringInterpolationSegment: sex)
-        myTextField.textAlignment = NSTextAlignment.Center // 中央寄せする
+        myTextField.textAlignment = NSTextAlignment.Justified // 中央寄せする
         myTextField.delegate = self //デリゲートを追加
         // 左詰めの設定をする.
         myTextField.textAlignment = NSTextAlignment.Left
