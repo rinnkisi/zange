@@ -61,7 +61,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
 
     // ボタンの色
     private let buttonOffColor = UIColor(hex: "#c0dfd9")
-    private let buttonOnColor = UIColor(hex: "#3b3a36")
+    private let buttonOnColor = UIColor(hex: "#5c9c8f")
     
     private var myImageView: UIImageView!
     
@@ -70,15 +70,15 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         let ud = NSUserDefaults.standardUserDefaults()
         var sex:AnyObject! = ud.objectForKey("sex")
-        // 背景色は黒
+        // 背景色
         // 背景に画像を設定する.
-        self.view.backgroundColor = UIColor.clearColor()
-        myImageView = UIImageView(frame: CGRectMake(0, 0, self.view.bounds.width, 0))
-        myImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        let data_sample = SwiftDataSample()
-        let myImage = UIImage(named: "zange.jpg")
-        myImageView.image = myImage
-        myImageView.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 270.0)
+        // self.view.backgroundColor = UIColor.clearColor()
+        // myImageView = UIImageView(frame: CGRectMake(0, 0, self.view.bounds.width, 0))
+        // myImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        // let data_sample = SwiftDataSample()
+        // let myImage = UIImage(named: "zange.jpg")
+        // myImageView.image = myImage
+        // myImageView.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 270.0)
         // self.view.addSubview(myImageView)
         self.view.backgroundColor = UIColor(hex: "#b3c2bf")
         // 「懺悔を入力」を表示するラベル
@@ -139,7 +139,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         // Buttonを生成する.
         myButton = UIButton()
         myButton.frame = CGRectMake(0,0,self.view.bounds.width,75)
-        myButton.backgroundColor = UIColor(hex: "#b56969")
+        myButton.backgroundColor = UIColor(hex: "#9b2c3b")
         myButton.layer.masksToBounds = true
         myButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height - 37.5)
         myButton.tag = 1         // タグを設定する.
