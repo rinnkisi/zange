@@ -81,7 +81,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         let myImage = UIImage(named: "zange.jpg")
         myImageView.image = myImage
         myImageView.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 270.0)
-        self.view.addSubview(myImageView)
+        // self.view.addSubview(myImageView)
         // self.view.backgroundColor = UIColor(hex: "#b3c2bf")
         // 「懺悔を入力」を表示するラベル
         let ZangeLabel: UILabel = UILabel()
