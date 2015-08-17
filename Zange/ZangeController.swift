@@ -6,9 +6,50 @@
 //
 
 import UIKit
+import Foundation
+
+
+func hexFromRGB(hex:String) -> (CGFloat,CGFloat,CGFloat,CGFloat) {
+    var red: CGFloat   = 0.0
+    var green: CGFloat = 0.0
+    var blue: CGFloat  = 0.0
+    var alpha: CGFloat = 1.0
+    
+    let index = advance(hex.startIndex, 1)
+    let hexCode = hex.substringFromIndex(index)
+    let scanner = NSScanner(string: hexCode)
+    var hexValue: CUnsignedLongLong = 0
+    if scanner.scanHexLongLong(&hexValue) {
+        if count(hexCode) == 6 {
+            red   = CGFloat((hexValue & 0xFF0000) >> 16) / 255.0
+            green = CGFloat((hexValue & 0x00FF00) >> 8)  / 255.0
+            blue  = CGFloat(hexValue & 0x0000FF) / 255.0
+        } else if count(hexCode) == 8 {
+            red   = CGFloat((hexValue & 0xFF000000) >> 24) / 255.0
+            green = CGFloat((hexValue & 0x00FF0000) >> 16) / 255.0
+            blue  = CGFloat((hexValue & 0x0000FF00) >> 8)  / 255.0
+            alpha = CGFloat(hexValue & 0x000000FF)         / 255.0
+        } else {
+            print("err")
+        }
+    }
+    
+    return (red,green,blue,alpha)
+}
+
+extension UIColor {
+    convenience init(hex: String = "") {
+        var red: CGFloat  = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat  = 0.0
+        var alpha: CGFloat = 1.0
+        (red,green,blue,alpha) = hexFromRGB(hex)
+        self.init(red:red, green:green, blue:blue, alpha:alpha)
+    }
+}
 
 class ZangeController: UIViewController, UITextFieldDelegate {
-  
+    
     // 懺悔を入力するビュー
     let ud = NSUserDefaults.standardUserDefaults()
     // テキストフィールドの宣言
@@ -20,17 +61,28 @@ class ZangeController: UIViewController, UITextFieldDelegate {
     private var myButton: UIButton!
 
     // ボタンの色
-    private let buttonOffColor = UIColor(red: 0.7, green: 0.7, blue: 1.0, alpha: 1.0)
-    private let buttonOnColor = UIColor(red: 0.1, green: 0.1, blue: 1.0, alpha: 1.0)
-  
+    private let buttonOffColor = UIColor(hex: "#c0dfd9")
+    private let buttonOnColor = UIColor(hex: "#3b3a36")
+    
+    private var myImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let ud = NSUserDefaults.standardUserDefaults()
         var sex:AnyObject! = ud.objectForKey("sex")
         // 背景色は黒
-        // self.view.backgroundColor = UIColor.blackColor()
-        self.view.backgroundColor = UIColor.blackColor()
+        // 背景に画像を設定する.
+        self.view.backgroundColor = UIColor.clearColor()
+        myImageView = UIImageView(frame: CGRectMake(0, 0, self.view.bounds.width, 0))
+        myImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        let data_sample = SwiftDataSample()
+        // println(data_sample.Get_Bool2PicPath(ud.objectForKey("sex")!.boolValue!))
+        let myImage = UIImage(named: "zange.jpg")
+        myImageView.image = myImage
+        myImageView.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 270.0)
+        self.view.addSubview(myImageView)
+        // self.view.backgroundColor = UIColor(hex: "#b3c2bf")
         // 「懺悔を入力」を表示するラベル
         let ZangeLabel: UILabel = UILabel()
         ZangeLabel.font = UIFont.systemFontOfSize(CGFloat(20))
@@ -81,14 +133,14 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         // Buttonを生成する.
         myButton = UIButton()
         myButton.frame = CGRectMake(0,0,self.view.bounds.width,100)
-        myButton.backgroundColor = UIColor.redColor()
+        myButton.backgroundColor = UIColor(hex: "#b56969")
         myButton.layer.masksToBounds = true
         //myButton.layer.cornerRadius = 20.0
         myButton.layer.position = CGPoint(x: self.view.frame.width/2, y:self.view.bounds.height-50)
         myButton.tag = 1         // タグを設定する.
         // タイトルを設定する(通常時).
         myButton.setTitle("懺悔ボタン", forState: UIControlState.Normal)
-        myButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         // タイトルを設定する(ボタンがハイライトされた時).
         myButton.setTitle("懺悔中", forState: UIControlState.Highlighted)
         myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
