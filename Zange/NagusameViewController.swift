@@ -9,7 +9,6 @@
 import UIKit
 import AVFoundation
 
-// 美少女またはイケメンが懺悔を聞き入るクラス
 class NagusameViewController: UIViewController {
   
   // 質問文問い合わせリクエスト
@@ -41,24 +40,23 @@ class NagusameViewController: UIViewController {
     // 背景色
     self.view.backgroundColor = UIColor.whiteColor()
     
-    // 美少女またはイケメンの画像を表示
+    // 画像を表示
     myImageView = UIImageView(frame: CGRectMake(0, 0, self.view.bounds.width, 0))
     myImageView.contentMode = UIViewContentMode.ScaleAspectFill
     let data_sample = SwiftDataSample()
-    // println(data_sample.Get_Bool2PicPath(ud.objectForKey("sex")!.boolValue!))
     let myImage = UIImage(named: data_sample.Get_Bool2PicPath(!ud.objectForKey("sex")!.boolValue!))
     myImageView.image = myImage
-    myImageView.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 270.0)
+    myImageView.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 270)
     self.view.addSubview(myImageView)
     
     //発話を設定
     param.utt = ud.stringForKey("zangetext")
-    // APIのキャラクタ設定(デフォルト:ゼロ,20:桜子,30:ハヤテ)
+    // APIのキャラクタ設定(デフォルト:0,20:桜子,30:ハヤテ)
     if (ud.objectForKey("sex")!.boolValue!) {
       param.character = 20
     }
     else {
-      param.character = 30
+      param.character = 0
     }
     
     /*
@@ -82,15 +80,17 @@ class NagusameViewController: UIViewController {
       
       self.talker.speakUtterance(utterance)
       
-      // 格言を表示
+      // 発言を表示
       let myNormalLabel: UILabel = UILabel()
       myNormalLabel.font = UIFont.systemFontOfSize(CGFloat(20))
       myNormalLabel.text = resultData.yomi
-      myNormalLabel.frame = CGRect(x: self.view.bounds.width / 2 - 150, y: self.view.bounds.height - 250, width: 300, height: 100)
-      myNormalLabel.numberOfLines = 0 // 自動改行
-      myNormalLabel.sizeToFit();  // 高さを自動で調整
+      myNormalLabel.frame = CGRect(x: (self.view.bounds.width - 300) / 2 , y: self.view.bounds.height - 250, width: 300, height: 100)
+      // 自動改行
+      myNormalLabel.numberOfLines = 0
+      // 高さを自動で調整
+      myNormalLabel.sizeToFit()
      
-      myNormalLabel.textColor = UIColor.blackColor()
+      myNormalLabel.textColor = UIColor(hex: "#3b3a36")
       myNormalLabel.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.7)
       self.view.addSubview(myNormalLabel)
       
@@ -100,13 +100,12 @@ class NagusameViewController: UIViewController {
     
     // 「もう一度懺悔する」ボタンを生成
     let backButton: UIButton = UIButton(frame: CGRectMake(0, 0, self.view.bounds.width, 150))
-    backButton.backgroundColor = UIColor.blueColor();
+    backButton.backgroundColor = UIColor(hex: "#3b3a36");
     backButton.layer.masksToBounds = true
     backButton.setTitle("もう一度懺悔する", forState: .Normal)
-    backButton.layer.cornerRadius = 0
     backButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height - 75)
     backButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-    self.view.addSubview(backButton);
+    self.view.addSubview(backButton)
   }
   
   override func didReceiveMemoryWarning() {
