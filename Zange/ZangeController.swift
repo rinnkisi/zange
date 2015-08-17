@@ -98,6 +98,11 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         // myTextField.text = String(stringInterpolationSegment: sex)
         myTextField.textAlignment = NSTextAlignment.Center // 中央寄せする
         myTextField.delegate = self //デリゲートを追加
+        // 左詰めの設定をする.
+        myTextField.textAlignment = NSTextAlignment.Left
+        // テキストフィールドを強制フォーカス
+        NSOperationQueue.mainQueue().addOperationWithBlock({myTextField.becomeFirstResponder()});
+  
         self.view.addSubview(myTextField) // ビュー画面
         // 性別を選択するビュー。
         let SexLabel: UILabel = UILabel()
@@ -112,20 +117,22 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         // 「男」ボタンの生成
         ud.setBool(true, forKey: "sex")//初期値を男性に設定
         menButton.backgroundColor = buttonOnColor
+        menButton.frame = CGRectMake(0,0,self.view.bounds.width/2,50)
         menButton.layer.masksToBounds = true
         menButton.setTitle("男", forState: .Normal)
         //menButton.layer.cornerRadius = 20.0
-        menButton.layer.position = CGPoint(x: self.view.bounds.width/2-60 , y:self.view.bounds.height-150)
+        menButton.layer.position = CGPoint(x: self.view.bounds.width/4 , y:self.view.bounds.height-170)
         // 「男」ボタンを追加する.
         menButton.addTarget(self, action: "didmenTouch:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(menButton);
         
         // 「女」ボタンの生成
         womenButton.backgroundColor = buttonOffColor
+        womenButton.frame = CGRectMake(0,0,self.view.bounds.width/2,50)
         womenButton.layer.masksToBounds = true
         womenButton.setTitle("女", forState: .Normal)
         //womenButton.layer.cornerRadius = 20.0
-        womenButton.layer.position = CGPoint(x: self.view.bounds.width/2+60 , y:self.view.bounds.height-150)
+        womenButton.layer.position = CGPoint(x: self.view.bounds.width/4*3 , y:self.view.bounds.height-170)
         womenButton.addTarget(self, action: "didwomenTouch:", forControlEvents: UIControlEvents.TouchUpInside)
         // 「女」ボタンを追加する.
         self.view.addSubview(womenButton);
@@ -134,15 +141,20 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         myButton = UIButton()
         myButton.frame = CGRectMake(0,0,self.view.bounds.width,100)
         myButton.backgroundColor = UIColor(hex: "#b56969")
+        myButton.frame = CGRectMake(0,0,self.view.bounds.width,150)
+        myButton.backgroundColor = UIColor.redColor()
         myButton.layer.masksToBounds = true
         //myButton.layer.cornerRadius = 20.0
-        myButton.layer.position = CGPoint(x: self.view.frame.width/2, y:self.view.bounds.height-50)
+        myButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height - 75)
         myButton.tag = 1         // タグを設定する.
         // タイトルを設定する(通常時).
         myButton.setTitle("懺悔ボタン", forState: UIControlState.Normal)
         myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        myButton.setTitle("懺悔する", forState: UIControlState.Normal)
+        myButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+
         // タイトルを設定する(ボタンがハイライトされた時).
-        myButton.setTitle("懺悔中", forState: UIControlState.Highlighted)
+        myButton.setTitle("懺悔中…", forState: UIControlState.Highlighted)
         myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
         // イベントを追加する.
         myButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
@@ -178,6 +190,8 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+  
+  
     internal func onClickMyButton(sender: UIButton){
         /* ボタン押下時の処理 */
         // 遷移するViewを定義する.
