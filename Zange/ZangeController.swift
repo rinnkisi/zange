@@ -8,7 +8,6 @@
 import UIKit
 import Foundation
 
-
 func hexFromRGB(hex:String) -> (CGFloat,CGFloat,CGFloat,CGFloat) {
     var red: CGFloat   = 0.0
     var green: CGFloat = 0.0
@@ -49,7 +48,7 @@ extension UIColor {
 }
 
 class ZangeController: UIViewController, UITextFieldDelegate {
-    
+  
     // 懺悔を入力するビュー
     let ud = NSUserDefaults.standardUserDefaults()
     // テキストフィールドの宣言
@@ -62,7 +61,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
 
     // ボタンの色
     private let buttonOffColor = UIColor(hex: "#c0dfd9")
-    private let buttonOnColor = UIColor(hex: "#3b3a36")
+    private let buttonOnColor = UIColor(hex: "#5c9c8f")
     
     private var myImageView: UIImageView!
     
@@ -71,18 +70,17 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         let ud = NSUserDefaults.standardUserDefaults()
         var sex:AnyObject! = ud.objectForKey("sex")
-        // 背景色は黒
+        // 背景色
         // 背景に画像を設定する.
-        self.view.backgroundColor = UIColor.clearColor()
-        myImageView = UIImageView(frame: CGRectMake(0, 0, self.view.bounds.width, 0))
-        myImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        let data_sample = SwiftDataSample()
-        // println(data_sample.Get_Bool2PicPath(ud.objectForKey("sex")!.boolValue!))
-        let myImage = UIImage(named: "zange.jpg")
-        myImageView.image = myImage
-        myImageView.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 270.0)
-        self.view.addSubview(myImageView)
-        // self.view.backgroundColor = UIColor(hex: "#b3c2bf")
+        // self.view.backgroundColor = UIColor.clearColor()
+        // myImageView = UIImageView(frame: CGRectMake(0, 0, self.view.bounds.width, 0))
+        // myImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        // let data_sample = SwiftDataSample()
+        // let myImage = UIImage(named: "zange.jpg")
+        // myImageView.image = myImage
+        // myImageView.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 270.0)
+        // self.view.addSubview(myImageView)
+        self.view.backgroundColor = UIColor(hex: "#b3c2bf")
         // 「懺悔を入力」を表示するラベル
         let ZangeLabel: UILabel = UILabel()
         ZangeLabel.font = UIFont.systemFontOfSize(CGFloat(20))
@@ -100,6 +98,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         myTextField.delegate = self //デリゲートを追加
         // 左詰めの設定をする.
         myTextField.textAlignment = NSTextAlignment.Left
+        myTextField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.6)
         // テキストフィールドを強制フォーカス
         NSOperationQueue.mainQueue().addOperationWithBlock({myTextField.becomeFirstResponder()});
   
@@ -108,7 +107,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         let SexLabel: UILabel = UILabel()
         SexLabel.textColor = UIColor.whiteColor()
         SexLabel.font = UIFont.systemFontOfSize(CGFloat(20))
-        SexLabel.text = "あなたの性別をお選びください"
+        SexLabel.text = "どちらに懺悔する？"
         SexLabel.sizeToFit()
         //SexLabel.center = CGPointMake(100,100)
         SexLabel.frame = CGRect(x: (self.view.bounds.width - 300) / 2,y:self.view.bounds.height / 2, width: 300, height: 30)
@@ -117,39 +116,34 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         // 「男」ボタンの生成
         ud.setBool(true, forKey: "sex")//初期値を男性に設定
         menButton.backgroundColor = buttonOnColor
-        menButton.frame = CGRectMake(0,0,self.view.bounds.width/2,50)
+        menButton.frame = CGRectMake(0,0,self.view.bounds.width/2,75)
         menButton.layer.masksToBounds = true
-        menButton.setTitle("男", forState: .Normal)
+        menButton.setTitle("美少女に", forState: .Normal)
         //menButton.layer.cornerRadius = 20.0
-        menButton.layer.position = CGPoint(x: self.view.bounds.width/4 , y:self.view.bounds.height-170)
+        menButton.layer.position = CGPoint(x: self.view.bounds.width/4 , y:self.view.bounds.height-112)
         // 「男」ボタンを追加する.
         menButton.addTarget(self, action: "didmenTouch:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(menButton);
         
         // 「女」ボタンの生成
         womenButton.backgroundColor = buttonOffColor
-        womenButton.frame = CGRectMake(0,0,self.view.bounds.width/2,50)
+        womenButton.frame = CGRectMake(0,0,self.view.bounds.width/2,75)
         womenButton.layer.masksToBounds = true
-        womenButton.setTitle("女", forState: .Normal)
+        womenButton.setTitle("イケメンに", forState: .Normal)
         //womenButton.layer.cornerRadius = 20.0
-        womenButton.layer.position = CGPoint(x: self.view.bounds.width/4*3 , y:self.view.bounds.height-170)
+        womenButton.layer.position = CGPoint(x: self.view.bounds.width/4*3 , y:self.view.bounds.height-112)
         womenButton.addTarget(self, action: "didwomenTouch:", forControlEvents: UIControlEvents.TouchUpInside)
         // 「女」ボタンを追加する.
         self.view.addSubview(womenButton);
       
         // Buttonを生成する.
         myButton = UIButton()
-        myButton.frame = CGRectMake(0,0,self.view.bounds.width,100)
-        myButton.backgroundColor = UIColor(hex: "#b56969")
-        myButton.frame = CGRectMake(0,0,self.view.bounds.width,150)
-        myButton.backgroundColor = UIColor.redColor()
+        myButton.frame = CGRectMake(0,0,self.view.bounds.width,75)
+        myButton.backgroundColor = UIColor(hex: "#9b2c3b")
         myButton.layer.masksToBounds = true
-        //myButton.layer.cornerRadius = 20.0
-        myButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height - 75)
+        myButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height - 37.5)
         myButton.tag = 1         // タグを設定する.
         // タイトルを設定する(通常時).
-        myButton.setTitle("懺悔ボタン", forState: UIControlState.Normal)
-        myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         myButton.setTitle("懺悔する", forState: UIControlState.Normal)
         myButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
 
@@ -200,8 +194,9 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         return true
     }
   
+    // ボタン押下時の処理
     internal func onClickMyButton(sender: UIButton){
-        /* ボタン押下時の処理 */
+      
         // 遷移するViewを定義する.
         let myThirdViewController: UIViewController = NagusameViewController()
         // コンソールにテキストフィールドの入力値を表示
