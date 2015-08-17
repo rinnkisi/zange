@@ -49,7 +49,7 @@ extension UIColor {
 }
 
 class ZangeController: UIViewController, UITextFieldDelegate {
-    
+  
     // 懺悔を入力するビュー
     let ud = NSUserDefaults.standardUserDefaults()
     // テキストフィールドの宣言
@@ -100,6 +100,7 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         myTextField.delegate = self //デリゲートを追加
         // 左詰めの設定をする.
         myTextField.textAlignment = NSTextAlignment.Left
+        myTextField.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.6)
         // テキストフィールドを強制フォーカス
         NSOperationQueue.mainQueue().addOperationWithBlock({myTextField.becomeFirstResponder()});
   
@@ -189,7 +190,6 @@ class ZangeController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-  
   
     internal func onClickMyButton(sender: UIButton){
         /* ボタン押下時の処理 */
