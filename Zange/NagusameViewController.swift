@@ -115,6 +115,7 @@ class NagusameViewController: UIViewController {
   // ボタン押下時の処理
   internal func onClickMyButton(sender: UIButton){
     // popすることにより、前のビューに戻る
+    
     self.navigationController?.popViewControllerAnimated(true)
   }
 }
