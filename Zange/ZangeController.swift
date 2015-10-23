@@ -14,22 +14,22 @@ func hexFromRGB(hex:String) -> (CGFloat,CGFloat,CGFloat,CGFloat) {
     var blue: CGFloat  = 0.0
     var alpha: CGFloat = 1.0
     
-    let index = advance(hex.startIndex, 1)
+    let index = hex.startIndex.advancedBy(1)
     let hexCode = hex.substringFromIndex(index)
     let scanner = NSScanner(string: hexCode)
     var hexValue: CUnsignedLongLong = 0
     if scanner.scanHexLongLong(&hexValue) {
-        if count(hexCode) == 6 {
+        if hexCode.characters.count == 6 {
             red   = CGFloat((hexValue & 0xFF0000) >> 16) / 255.0
             green = CGFloat((hexValue & 0x00FF00) >> 8)  / 255.0
             blue  = CGFloat(hexValue & 0x0000FF) / 255.0
-        } else if count(hexCode) == 8 {
+        } else if hexCode.characters.count == 8 {
             red   = CGFloat((hexValue & 0xFF000000) >> 24) / 255.0
             green = CGFloat((hexValue & 0x00FF0000) >> 16) / 255.0
             blue  = CGFloat((hexValue & 0x0000FF00) >> 8)  / 255.0
             alpha = CGFloat(hexValue & 0x000000FF)         / 255.0
         } else {
-            print("err")
+            print("err", terminator: "")
         }
     }
     
@@ -68,7 +68,7 @@ class ZangeController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let ud = NSUserDefaults.standardUserDefaults()
-        var sex:AnyObject! = ud.objectForKey("sex")
+        var sex: AnyObject! = ud.objectForKey("sex")
         // 背景色
         // 背景に画像を設定する.
         // self.view.backgroundColor = UIColor.clearColor()
@@ -90,9 +90,9 @@ class ZangeController: UIViewController, UITextViewDelegate {
 
         // 懺悔を入力するテキストフィールドを宣言
         myTextView = UITextView(frame: CGRectMake((self.view.bounds.width - 270) / 2, 100, 270, 100))
-        myTextView.layer.borderWidth = 1
+        // myTextView.layer.borderWidth = 1
         // 枠線の色を黒に設定する.
-        myTextView.layer.borderColor = UIColor.blackColor().CGColor
+        // myTextView.layer.borderColor = UIColor.blackColor().CGColor
         myTextView.returnKeyType = UIReturnKeyType.Done //改行を完了ボタンにする
         myTextView.font = UIFont(name: "AmericanTypewriter",size: 20)
         // myTextField.text = String(stringInterpolationSegment: sex)
@@ -104,7 +104,7 @@ class ZangeController: UIViewController, UITextViewDelegate {
         
         self.view.addSubview(myTextView)
         // テキストフィールドを強制フォーカス
-        NSOperationQueue.mainQueue().addOperationWithBlock({myTextView.becomeFirstResponder()});
+        NSOperationQueue.mainQueue().addOperationWithBlock({self.myTextView.becomeFirstResponder()});
   
         // 性別を選択するビュー。
         let SexLabel: UILabel = UILabel()
@@ -167,19 +167,19 @@ class ZangeController: UIViewController, UITextViewDelegate {
     }
     func didmenTouch(button :UIButton){
         //男性ボタンが押された時の処理
-        var flag = true
+        _ = true
         menButton.backgroundColor = buttonOnColor
         womenButton.backgroundColor = buttonOffColor
         ud.setBool(true, forKey: "sex") //ユーザのデフォルトに入れる
-        println("「男」ボタンがタッチされました")
+        print("「男」ボタンがタッチされました")
     }
     func didwomenTouch(button :UIButton){
         //女性ボタンが押された時の処理
-        var flag = false
+        _ = false
         menButton.backgroundColor = buttonOffColor
         womenButton.backgroundColor = buttonOnColor
         ud.setBool(false, forKey: "sex") //ユーザのデフォルトに入れる
-        println("「女」ボタンがタッチされました")
+        print("「女」ボタンがタッチされました")
     }
   
     func textViewShouldReturn(textView: UITextView) -> Bool {
@@ -189,8 +189,8 @@ class ZangeController: UIViewController, UITextViewDelegate {
         // コンソールにテキストフィールドの入力値を表示
         // println(myTextField.text)
         ud.setObject(myTextView.text, forKey: "zangetext")
-        println(ud.objectForKey("zangetext"))
-        println(ud.objectForKey("sex"))
+        print(ud.objectForKey("zangetext"))
+        print(ud.objectForKey("sex"))
         // ビューを遷移
         self.navigationController?.pushViewController(myThirdViewController, animated: true)
         myTextView.text = nil
@@ -204,8 +204,8 @@ class ZangeController: UIViewController, UITextViewDelegate {
                 // コンソールにテキストフィールドの入力値を表示
                 // println(myTextField.text)
                 ud.setObject(myTextView.text, forKey: "zangetext")
-                println(ud.objectForKey("zangetext"))
-                println(ud.objectForKey("sex"))
+                print(ud.objectForKey("zangetext"))
+                print(ud.objectForKey("sex"))
                 // ビューを遷移
                 self.navigationController?.pushViewController(myThirdViewController, animated: true)
                 myTextView.text = nil
@@ -220,10 +220,10 @@ class ZangeController: UIViewController, UITextViewDelegate {
         // 遷移するViewを定義する.
         let myThirdViewController: UIViewController = NagusameViewController()
         // コンソールにテキストフィールドの入力値を表示
-        println(myTextView.text)
+        print(myTextView.text)
         ud.setObject(myTextView.text, forKey: "zangetext")
-        println(ud.objectForKey("zangetext"))
-        println(ud.objectForKey("sex"))
+        print(ud.objectForKey("zangetext"))
+        print(ud.objectForKey("sex"))
         // ビューを遷移
         self.navigationController?.pushViewController(myThirdViewController, animated: true)
         myTextView.text = nil

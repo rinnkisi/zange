@@ -95,7 +95,7 @@ class NagusameViewController: UIViewController {
       self.view.addSubview(myNormalLabel)
       
       }) { (sdkError) -> Void in
-        println("\(sdkError)")
+        print("\(sdkError)")
     }
     
     // 「もう一度懺悔する」ボタンを生成

@@ -12,7 +12,7 @@ class SwiftDataSample {
   init() {
     let (tb, err) = SD.existingTables()
     // 懺悔テーブル
-    if !contains(tb, "zange_mst") {
+    if !tb.contains("zange_mst") {
       if let err = SD.createTable("zange_mst", withColumnNamesAndTypes: ["zange_id" : .IntVal, "zange":.StringVal]) {
         //there was an error during this function, handle it here
       } else {
@@ -20,7 +20,7 @@ class SwiftDataSample {
       }
     }
     // 画像テーブル
-    if !contains(tb, "gazou_mst") {
+    if !tb.contains("gazou_mst") {
       if let err = SD.createTable("gazou_mst", withColumnNamesAndTypes: ["gazou_id" : .IntVal, "url":.StringVal, "collect" : .BoolVal, "sex" : .BoolVal]){
         //there was an error during this function, handle it here
       } else {
@@ -31,13 +31,13 @@ class SwiftDataSample {
         var gazou_id = 0
         
         // 男性の画像追加
-        let data_men = NSString(contentsOfFile: NSBundle.mainBundle().pathForResource("men", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil) as! String
+        let data_men = (try! NSString(contentsOfFile: NSBundle.mainBundle().pathForResource("men", ofType: "txt")!, encoding: NSUTF8StringEncoding)) as! String
         data_men.enumerateLines { (line, stop) -> () in
           Add_Gazou(gazou_id++, filename : line, sex: Men)
         }
         
         // 女性の画像追加
-        let data_women = NSString(contentsOfFile: NSBundle.mainBundle().pathForResource("women", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil) as! String
+        let data_women = (try! NSString(contentsOfFile: NSBundle.mainBundle().pathForResource("women", ofType: "txt")!, encoding: NSUTF8StringEncoding)) as! String
         data_women.enumerateLines { (line, stop) -> () in
           Add_Gazou(gazou_id++, filename : line, sex: Women)
         }
@@ -45,23 +45,23 @@ class SwiftDataSample {
       }
     }
     // 格言テーブル
-    if !contains(tb, "kakugen_mst") {
+    if !tb.contains("kakugen_mst") {
       if let err = SD.createTable("kakugen_mst", withColumnNamesAndTypes: ["kakugen_id" : .IntVal, "word":.StringVal]) {
         //there was an error during this function, handle it here
       } else {
         //no error, the table was created successfully
         // データを追加
         var kakugen_id = 1;
-        let data = NSString(contentsOfFile: NSBundle.mainBundle().pathForResource("proverbs", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil) as! String
+        let data = (try! NSString(contentsOfFile: NSBundle.mainBundle().pathForResource("proverbs", ofType: "txt")!, encoding: NSUTF8StringEncoding)) as! String
         data.enumerateLines { (line, stop) -> () in
           Add_Kakugen(kakugen_id++, kakugen: line)
         }
       }
     }
-    println(SD.databasePath())
+    print(SD.databasePath())
     
-    println("実行")
-    println(Get_RndKakugen())
+    print("実行")
+    print(Get_RndKakugen())
   }
   // 初期データ作成用
   func Add_Kakugen(kakugen_id : Int, kakugen :String) ->Bool{
@@ -73,7 +73,7 @@ class SwiftDataSample {
     if let err = SwiftData.executeChange( sql, withArgs: [kakugen_id, kakugen]) {
       //エラーが発生した時の処理
       let msg = SwiftData.errorMessageForCode(err);
-      print(msg)
+      print(msg, terminator: "")
       return false;
     } else {
       return true;
@@ -89,7 +89,7 @@ class SwiftDataSample {
     if let err = SwiftData.executeChange( sql, withArgs: [gazou_id, filename, sex]) {
       //エラーが発生した時の処理
       let msg = SwiftData.errorMessageForCode(err);
-      print(msg)
+      print(msg, terminator: "")
       return false;
     } else {
       return true;
@@ -107,7 +107,7 @@ class SwiftDataSample {
     if let err = SwiftData.executeChange( sql, withArgs: [zange_id, zange]) {
       //エラーが発生した時の処理
       let msg = SwiftData.errorMessageForCode(err);
-      print(msg)
+      print(msg, terminator: "")
       return false;
     } else {
       return true;
@@ -166,7 +166,7 @@ class SwiftDataSample {
     if let err = SwiftData.executeChange( sql, withArgs: [gazou_id]) {
       //エラーが発生した時の処理
       let msg = SwiftData.errorMessageForCode(err);
-      print(msg)
+      print(msg, terminator: "")
       return false;
     } else {
       return true;

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "75A99DC63C730FC5F8874DEE37DFCDF398089527+++5847AC7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "75A99DC63C730FC5F8874DEE37DFCDF398089527+++5847AC7" : 0,
+    "75A99DC63C730FC5F8874DEE37DFCDF398089527+++793A982" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9AE68E79-D3D6-416B-85AE-83C7DC311DED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "75A99DC63C730FC5F8874DEE37DFCDF398089527+++5847AC7" : "hackathon2015_div2_a",
+    "75A99DC63C730FC5F8874DEE37DFCDF398089527+++793A982" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Zange",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Zange.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:rinnkisi\/hackathon2015_div2_a.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "75A99DC63C730FC5F8874DEE37DFCDF398089527+++5847AC7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:rinnkisi\/hackathon2015_div2_a.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "75A99DC63C730FC5F8874DEE37DFCDF398089527+++793A982"
+    }
+  ]
+}
